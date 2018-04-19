@@ -23,7 +23,7 @@
       <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="43.0" layoutY="118.0" prefHeight="17.0" prefWidth="41.0" text="Crypto" textAlignment="RIGHT" />
       <ImageView fitHeight="91.0" fitWidth="997.0" layoutX="17.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@indres-header.jpg" />
+            <Image url="@../images/indres-header.jpg" />
          </image>
       </ImageView>
       <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="198.0" layoutY="118.0" text="Last Price" textAlignment="RIGHT" />

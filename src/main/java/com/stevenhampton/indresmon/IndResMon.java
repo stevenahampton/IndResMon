@@ -35,7 +35,7 @@ public class IndResMon extends Application {
         
         stage.setScene(scene);
         stage.setTitle("Independent Reserve Monitor");
-        stage.getIcons().add(new Image(getClass().getResourceAsStream("indres.png")));
+        stage.getIcons().add(new Image(getClass().getResourceAsStream("/images/indres.png")));
         stage.show();
     }
 
