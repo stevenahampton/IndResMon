@@ -8,6 +8,7 @@ import com.stevenhampton.indresmon.pojos.TradeHistorySummary;
 import com.stevenhampton.indresmon.pojos.HistorySummaryItem;
 import java.net.URL;
 import java.text.DecimalFormat;
+import java.util.List;
 import java.util.ResourceBundle;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -170,9 +171,11 @@ public class IndResMonController {
             XYChart.Series series = new XYChart.Series();
             series.setName("Trade History");
             //populating the series with data
-            for (int i = 1; i <= hours; i++) {
-                HistorySummaryItem thi = ths.getHistorySummaryItems().get(i);
-                series.getData().add(new XYChart.Data(Integer.toString(i), thi.getAverageSecondaryCurrencyPrice()));
+            List<HistorySummaryItem> hsi = ths.getHistorySummaryItems();
+            int lim = Math.min(hours, hsi.size());
+            for (int i = 0; i < lim; i++) {
+                HistorySummaryItem thi = hsi.get(i);
+                series.getData().add(new XYChart.Data(Integer.toString(i + 1), thi.getAverageSecondaryCurrencyPrice()));
             }
             chartTradeHistory.getData().setAll(series);
         }
